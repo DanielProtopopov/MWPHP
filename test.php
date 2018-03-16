@@ -2,7 +2,7 @@
 if($argv[1] && file_exists($argv[1])) {
 	echo 'ManateeWorks Library Version: ' . getLibVersion() . PHP_EOL;
 	echo 'Library Codes: ' . getSupportedCodes() . PHP_EOL;
-	echo 'Registration output: ' . registerSDK("t74AqrBqbxW50wE7IuM4RLaX0dh1fDemSgrZR19DPAc=") . PHP_EOL;
+	echo 'Registration output: ' . registerSDK("INSERT YOUR API KEY HERE") . PHP_EOL;
 
 	setResultType(MWB_RESULT_TYPE_MW);
 	setDirection(MWB_SCANDIRECTION_HORIZONTAL | MWB_SCANDIRECTION_VERTICAL);
@@ -24,8 +24,9 @@ if($argv[1] && file_exists($argv[1])) {
                            MWB_CODE_MASK_RSS);
 	setLevel(3);
 
-	// $startScan = microtime(true);
+	$startScan = microtime(true);
 	$scan = scanGrayscaleImage(realpath($argv[1]), MWP_PARSER_MASK_AAMVA);
-	// echo 'Scanning took ' . (microtime(true) - $startScan) . ' seconds' . PHP_EOL;
+	echo 'Scanning took ' . (microtime(true) - $startScan) . ' seconds' . PHP_EOL;
 	print_r($scan);
 }
+echo 'Usage: php test.php ID.jpg' . PHP_EOL;
