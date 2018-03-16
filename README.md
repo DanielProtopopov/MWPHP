@@ -1,5 +1,5 @@
 # MWPHP
-This is a PHP extension for ManateeWorks C library. It uses [https://github.com/CopernicaMarketingSoftware/PHP-CPP!](PHP-CPP) to wrap basic function exports provided by the library. 
+This is a PHP extension for ManateeWorks C library. It uses [PHP-CPP](https://github.com/CopernicaMarketingSoftware/PHP-CPP) to wrap basic function exports provided by the library. 
 Uses libjpeg to load JPEG images from which to do the recognition from. It's a good idea to use image converter inside the extension, but my attempt to employ ImageMagick (Magick++) there has failed as I could not figure out how to get raw bytes of the image in the same way
 as it's currently done. 
 
